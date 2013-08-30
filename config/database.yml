@@ -1,0 +1,20 @@
+development: &defaults
+  adapter: postgresql
+  encoding: unicode
+  database: solution_development
+  pool: 5
+  username: enbake
+  password: admin
+  host: localhost
+
+test:
+  <<: *defaults
+  database: solution_test
+
+staging:
+  <<: *defaults
+  database: solution_staging
+
+production:
+  <<: *defaults
+  database: solution_production
